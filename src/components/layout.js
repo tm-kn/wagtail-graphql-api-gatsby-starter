@@ -16,16 +16,16 @@ const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+        wagtail {
+          currentSite {
+            name
           }
         }
       }
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={data.wagtail.currentSite.name} />
         <div
           style={{
             margin: `0 auto`,
