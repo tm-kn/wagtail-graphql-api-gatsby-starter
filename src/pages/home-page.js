@@ -34,7 +34,7 @@ const HomePage = ({ data }) => {
     <h1>{page.title}</h1>
     <p>Page statically generated with data provided from Wagtail CMS.</p>
     <a href="https://wagtail.io">
-      <img src={require('../images/wagtail.svg')} style={{width: '50%'}} />
+      <img src={require('../images/wagtail.svg')} style={{ width: '50%' }} />
     </a>
     {renderPageList(page.children, 'See')}
   </Layout>;

@@ -43,7 +43,7 @@ const Header = ({ siteTitle }) => (
             }
           }
         `}
-        render={({wagtail}) => (
+        render={({ wagtail }) => (
           <nav className='main-nav'>
             <ul>
               {wagtail.pages.wagtailcore.page.map(page => <li key={page.id}>
