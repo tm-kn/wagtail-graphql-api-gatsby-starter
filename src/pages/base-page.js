@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/layout';
-import Image from '../components/image';
 import SEO from '../components/seo';
 
 const BasePage = ({ data }) => {
@@ -33,17 +32,17 @@ const BasePage = ({ data }) => {
   return <Layout>
     <SEO title={page.seoTitle} description={page.seoDescription} />
     <h1>{page.title}</h1>
-    {renderPageList([page.parent].filter(x => x), "Parent")}
-    {renderPageList(page.ancestors, "Ancestors")}
-    {renderPageList(page.children, "Children")}
-    {renderPageList(page.previousSiblings, "Previous siblings")}
-    {renderPageList(page.nextSiblings, "Next siblings")}
-    {renderPageList(page.descendants, "Descendants")}
+    {renderPageList([page.parent].filter(x => x), 'Parent')}
+    {renderPageList(page.ancestors, 'Ancestors')}
+    {renderPageList(page.children, 'Children')}
+    {renderPageList(page.previousSiblings, 'Previous siblings')}
+    {renderPageList(page.nextSiblings, 'Next siblings')}
+    {renderPageList(page.descendants, 'Descendants')}
   </Layout>;
 };
 
 BasePage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired
 };
 
 export const query = graphql`
