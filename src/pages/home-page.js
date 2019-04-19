@@ -45,7 +45,7 @@ HomePage.propTypes = {
 };
 
 export const query = graphql`
-  query($pageID: Int) {
+  query($pageID: ID) {
     wagtail {
       pages {
         home {
