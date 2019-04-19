@@ -1,4 +1,4 @@
-import { Link } from 'gatsby';
+import { graphql, Link, StaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -27,6 +27,32 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <StaticQuery
+        query={graphql`
+          query {
+            wagtail {
+              pages {
+                wagtailcore {
+                  page(depth: 3, showInMenus: true) {
+                    id
+                    title
+                    url
+                  }
+                }
+              }
+            }
+          }
+        `}
+        render={({wagtail}) => (
+          <nav className='main-nav'>
+            <ul>
+              {wagtail.pages.wagtailcore.page.map(page => <li key={page.id}>
+                <Link to={page.url}>{page.title}</Link>
+              </li>)}
+            </ul>
+          </nav>
+        )}
+      />
     </div>
   </header>
 );

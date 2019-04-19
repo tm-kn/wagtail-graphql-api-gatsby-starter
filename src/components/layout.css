@@ -620,3 +620,20 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+nav.main-nav {
+  float: right;
+  position: relative;
+  bottom: 20px;
+  font-size: 150%;
+}
+
+nav.main-nav ul>li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav.main-nav a {
+  color: white;
+  text-decoration: none;
+}
