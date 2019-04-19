@@ -27,7 +27,7 @@ Or it can be saved it within `.env` file.
     Use the Gatsby CLI to create a new site, specifying the default starter.
 
     ```sh
-    gatsby new site https://github.com/gatsbyjs/gatsby-starter-default
+    gatsby new site https://github.com/tm-kn/wagtail-graphql-api-gatsby
     ```
 
 1.  **Start developing.**

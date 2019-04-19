@@ -1,7 +1,11 @@
 require('dotenv').config();
 
 function getWagtailGraphQLEndpoint () {
-  return process.env.WAGTAIL_GRAPHQL_ENDPOINT;
+  url = process.env.WAGTAIL_GRAPHQL_ENDPOINT;
+  if (!url) {
+    throw new Error("You need to set WAGTAIL_GRAPHQL_ENDPOINT.");
+  }
+  return url;
 }
 
 module.exports = {
