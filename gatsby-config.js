@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 function getWagtailGraphQLEndpoint () {
   return process.env.WAGTAIL_GRAPHQL_ENDPOINT;
 }
