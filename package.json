@@ -41,7 +41,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "npm run lint -- --fix",
-    "start": "npm run develop",
+    "start": "npm run develop -- -p 9000",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "lint": "eslint src"
